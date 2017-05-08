@@ -1,5 +1,7 @@
 # ImageProfessor
 Image Processing Server; C# / C++ / .NET / OpenCV
+- 시스템 구성
+  - https://docs.google.com/presentation/d/1kWbKFnd6SGt-4g97MrNIRaN1sAJkoaJlC_oRiWp6zeg/edit?usp=sharing
 
 ### 1. 클라이언트의 요청을 처리하는 부분
 - 클라이언트의 요청을 큐에 쌓는 부분
