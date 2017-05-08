@@ -1,0 +1,47 @@
+@model ImageProfessorWebServer.Models.Gallery
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Gallery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.UploadUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UploadUser)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UploadDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UploadDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SourceImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SourceImagePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultImagePath)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

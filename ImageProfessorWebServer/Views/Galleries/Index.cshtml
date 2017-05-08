@@ -1,0 +1,60 @@
+@model IEnumerable<ImageProfessorWebServer.Models.Gallery>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SourceImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsProcessing)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SourceImagePath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResultImagePath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsProcessing)
+                </td>
+                <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |*@
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
